@@ -227,10 +227,10 @@ outputs:
         - lib/
         - libexec/
         - share/
-        - {{ ctng_cpu_arch }}-{{ ctng_vendor }}-linux-gnu/
+        - {{ ctng_cpu_arch }}-{{ ctng_vendor }}-linux-gnueabihf/
     test:
       commands:
-        - test -f $PREFIX/bin/{{ ctng_cpu_arch }}-{{ ctng_vendor }}-linux-gnu-cc
+        - test -f $PREFIX/bin/{{ ctng_cpu_arch }}-{{ ctng_vendor }}-linux-gnueabihf-cc
     about:
       summary: GCC bootstrap compilers for building deps
       home: https://github.com/conda-forge/ctng-compiler-activation-feedstock

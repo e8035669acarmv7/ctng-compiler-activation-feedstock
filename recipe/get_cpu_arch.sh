@@ -8,6 +8,8 @@ get_cpu_arch() {
     CPU_ARCH="aarch64"
   elif [[ "$1" == "linux-s390x" ]]; then
     CPU_ARCH="s390x"
+  elif [[ "$1" == "linux-armv7l" ]]; then
+    CPU_ARCH="armv7l"
   else
     echo "Unknown architecture"
     exit 1
@@ -15,5 +17,5 @@ get_cpu_arch() {
   echo $CPU_ARCH
 }
 
-export CBUILD="$(get_cpu_arch $target_platform)-${ctng_vendor}-linux-gnu"
-export CHOST="$(get_cpu_arch $ctng_target_platform)-${ctng_vendor}-linux-gnu"
+export CBUILD="$(get_cpu_arch $target_platform)-${ctng_vendor}-linux-gnueabihf"
+export CHOST="$(get_cpu_arch $ctng_target_platform)-${ctng_vendor}-linux-gnueabihf"
