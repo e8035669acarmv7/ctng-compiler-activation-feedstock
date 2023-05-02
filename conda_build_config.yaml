@@ -1,0 +1,34 @@
+cdt_name:
+- cos7
+channel_sources:
+- e8035669acarmv7
+channel_targets:
+- e8035669acarmv7 main
+conda_glibc_ver:
+- '2.17'
+ctng_binutils:
+- '2.40'
+ctng_cpu_arch:
+- armv7l
+ctng_gcc:
+- 12.2.0
+ctng_target_platform:
+- linux-armv7l
+ctng_target_platform_u:
+- linux_armv7l
+ctng_vendor:
+- conda
+libgfortran_soname:
+- '5'
+linux_machine:
+- armv7l
+target_platform:
+- linux-armv7l
+zip_keys:
+- - ctng_gcc
+  - libgfortran_soname
+- - ctng_target_platform
+  - ctng_target_platform_u
+  - ctng_cpu_arch
+  - conda_glibc_ver
+  - linux_machine
