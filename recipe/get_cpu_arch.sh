@@ -17,5 +17,11 @@ get_cpu_arch() {
   echo $CPU_ARCH
 }
 
-export CBUILD="$(get_cpu_arch $target_platform)-${ctng_vendor}-linux-gnueabihf"
-export CHOST="$(get_cpu_arch $ctng_target_platform)-${ctng_vendor}-linux-gnueabihf"
+get_postfix() {
+  if [[ "$1" == "linux-armv7l" ]]; then
+    echo "eabihf"
+  fi
+}
+
+export CBUILD="$(get_cpu_arch $target_platform)-${ctng_vendor}-linux-gnu$(get_postfix $target_platform)"
+export CHOST="$(get_cpu_arch $ctng_target_platform)-${ctng_vendor}-linux-gnu$(get_postfix $ctng_target_platform)"
