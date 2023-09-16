@@ -1,31 +1,35 @@
+BUILD:
+- armv7-conda_cos7-linux-gnueabihf
+cdt_arch:
+- armv7l
 cdt_name:
-- cos6
+- cos7
 channel_sources:
-- conda-forge
+- e8035669acarmv7,conda-forge
 channel_targets:
-- conda-forge main
+- e8035669acarmv7 main
 conda_glibc_ver:
-- '2.12'
+- '2.17'
 ctng_binutils:
 - '2.40'
 ctng_cpu_arch:
-- x86_64
+- armv7l
 ctng_gcc:
 - 13.2.0
 ctng_target_platform:
-- linux-64
+- linux-armv7l
 ctng_target_platform_u:
-- linux_64
+- linux_armv7l
 ctng_vendor:
 - conda
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- e8035669/linux-anvil-armv7l
 libgfortran_soname:
 - '5'
 linux_machine:
-- x86_64
+- armv7l
 target_platform:
-- linux-64
+- linux-armv7l
 zip_keys:
 - - ctng_gcc
   - libgfortran_soname

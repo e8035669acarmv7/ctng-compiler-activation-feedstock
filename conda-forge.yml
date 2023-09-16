@@ -1,11 +1,25 @@
 build_platform:
-  linux_s390x: linux_64
-  linux_ppc64le: linux_64
-  linux_aarch64: linux_64
-
+  linux_64: linux_64
+  linux_armv7l: linux_armv7l
+provider:
+  linux_64: azure
+  linux_armv7l: azure
+  osx_64: None
+  win_64: None
+  linux_ppc64le: None
+  linux_aarch64: None
 conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
+channels:
+  sources:
+    - e8035669acarmv7
+    - conda-forge
+  targets:
+    - ['e8035669acarmv7', 'main']
+channel_priority: flexible
+remote_ci_setup: "e8035669acarmv7::conda-forge-ci-setup=3"
+
